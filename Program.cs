@@ -34,6 +34,7 @@ namespace efc_minimal_testcase
 		public int Id { get; set; }
 		public MoneyAmount AmountCharged { get; set; }
 		public MoneyAmount Profit { get; set; }
+		//public MoneyAmount ChargeFee { get; set; }
 	}
 
 	public class FinancialDbContext : DbContext
@@ -42,7 +43,6 @@ namespace efc_minimal_testcase
 
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
-			//optionsBuilder.UseInMemoryDatabase("FinancialTest");
 			optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=FinancialTestCase;Trusted_Connection=True;");
 		}
 
