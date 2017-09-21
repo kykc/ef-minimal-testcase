@@ -34,7 +34,7 @@ namespace efc_minimal_testcase
 		public int Id { get; set; }
 		public MoneyAmount AmountCharged { get; set; }
 		public MoneyAmount Profit { get; set; }
-		//public MoneyAmount ChargeFee { get; set; }
+		public MoneyAmount ChargeFee { get; set; }
 	}
 
 	public class FinancialDbContext : DbContext
@@ -52,7 +52,7 @@ namespace efc_minimal_testcase
 
 			modelBuilder.Entity<BusinessTransaction>().OwnsOne(p => p.Profit);
 			modelBuilder.Entity<BusinessTransaction>().OwnsOne(p => p.AmountCharged);
-			//modelBuilder.Entity<BusinessTransaction>().OwnsOne(p => p.ChargeFee);
+			modelBuilder.Entity<BusinessTransaction>().OwnsOne(p => p.ChargeFee);
 		}
 	}
 }
