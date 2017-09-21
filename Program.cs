@@ -3,13 +3,13 @@ using System;
 
 namespace efc_minimal_testcase
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
-    }
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			Console.WriteLine("Hello World!");
+		}
+	}
 
 	public enum Currency
 	{
